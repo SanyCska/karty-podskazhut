@@ -8,7 +8,7 @@
   --bg-color: #f3efec;
   --text-color: #312a4e;
   --accent-color: #ffab6b;
-  --main-font: "Raleway", sans-serif;
+  --main-font: "Raleway", serif;
   --accent-font: "STIX Two Text", sans-serif;
 }
 
@@ -16,7 +16,7 @@
   min-inline-size: 360px;
   margin: 0;
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: var(--text-color, #312a4e);
 }
 
 p,
@@ -39,7 +39,7 @@ figure {
 
 .heading {
   text-align: center;
-  font: var(--accent-font);
+  font-family: var(--accent-font, sans-serif);
   font-style: normal;
   font-weight: 600;
   line-height: 90%;
@@ -50,7 +50,7 @@ figure {
 }
 
 .header__title {
-  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vi, 7.5rem);
   padding-bottom: 40px;
   padding-top: 10%;
 }
@@ -58,8 +58,8 @@ figure {
 .header__menu {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var(--text-color);
-  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color, #312a4e);
+  border-top: 1px solid var(--text-color, #312a4e);
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -92,12 +92,12 @@ figure {
 
 button:focus,
 a:focus {
-  outline: 1px solid var(--text-color);
+  outline: 1px solid var(--text-color, #312a4e);
 }
 
 button:focus-visible,
 a:focus-visible {
-  outline: 1px solid var(--text-color);
+  outline: 1px solid var(--text-color, #312a4e);
 }
 
 button:disabled {
@@ -114,7 +114,7 @@ button:disabled {
   content: "";
   position: absolute;
   width: 104%;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #ffab6b);
   height: 0.3em;
   bottom: 3px;
   left: -1px;
@@ -135,7 +135,7 @@ button:disabled {
 
 .content__text-block {
   font-size: 18px;
-  font-family: var(--main-font);
+  font-family: var(--main-font, serif);
 }
 
 .content__text-block > .content__paragraph:not(:last-child) {
@@ -187,7 +187,7 @@ button:disabled {
 .content__text-block_type_first-lettered
   > .content__paragraph:first-of-type::first-letter {
   display: inline-block;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #ffab6b);
   padding: 0 4px;
   margin-right: 3px;
   font-size: 30px;
@@ -210,7 +210,7 @@ button:disabled {
   text-align: center;
   font-size: 18px;
   color: inherit;
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color, #312a4e);
 }
 
 .content__card {
@@ -221,7 +221,7 @@ button:disabled {
   gap: 0;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--text-color, #312a4e);
 }
 
 .content__card-title {
@@ -238,7 +238,7 @@ button:disabled {
   content: "";
   position: absolute;
   width: 104%;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #ffab6b);
   height: 0.3em;
   bottom: 3px;
   left: -3px;
@@ -254,7 +254,7 @@ button:disabled {
   margin-top: 10%;
   padding: 2.5%;
   text-align: center;
-  border-top: 1px solid var(--text-color);
+  border-top: 1px solid var(--text-color, #312a4e);
   font-size: 18px;
   color: currentColor;
 }

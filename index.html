@@ -15,11 +15,11 @@
     <header class="header">
       <h1 class="heading content-section header__title">Карты подскажут</h1>
       <nav class="header__menu content-section">
-        <div class="header__logo">
+        <a class="header__logo">
           <svg xmlns="http://www.w3.org/2000/svg" width="135" height="25">
             <use href="./images/logo.svg#logo"></use>
           </svg>
-        </div>
+        </a>
         <div class="header__theme-toggler">
           <ul>
             <li>
@@ -68,13 +68,20 @@
 
       <figure class="content__figure">
         <picture>
-          <source srcset="./images/cards-1x.avif" type="image/avif" />
-          <source srcset="./images/cards-1x.webp" type="image/webp" />
-          <source srcset="./images/cards-1x.png" type="image/png" />
-          <source srcset="./images/cards-2x.avif" type="image/avif" />
-          <source srcset="./images/cards-2x.webp" type="image/webp" />
+          <source
+            srcset="./images/cards-1x.avif 1x ./images/cards-2x.avif 2x"
+            type="image/avif"
+          />
+          <source
+            srcset="./images/cards-1x.webp 1x ./images/cards-2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            srcset="./images/cards-1x.png 1x  ./images/cards-2x.png 2x"
+            type="image/png"
+          />
           <img
-            src="./images/cards-2x.png"
+            srcset="./images/cards-2x.png"
             alt="Телефон, ручка и записки на столе"
             loading="lazy"
             class="content__picture"
@@ -118,14 +125,21 @@
         <p class="content__paragraph">
           И кстати, сейчас необязательно охотиться за редкими физическими
           колодами Oblique Strategies — тем более, что их моментально разбирают
-          фанаты Ино. Есть довольно симпатичные веб-сайты с
-          диджитал-эквивалентами карточек и приложения для
+          фанаты Ино. Есть довольно симпатичные
+          <a
+            href="https://obliquestrategies.ca/"
+            target="_blank"
+            class="content__link"
+          >
+            веб-сайты
+          </a>
+          с диджитал-эквивалентами карточек и приложения
           <a
             href="https://apps.apple.com/us/app/oblique-strategies-se/id1104927011"
             target="_blank"
             class="content__link"
           >
-            iOS
+            для iOS
           </a>
           и
           <a
