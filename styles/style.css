@@ -65,6 +65,7 @@ figure {
 }
 
 .header__theme-toggler {
+  font-family: var(--main-font);
   display: flex;
   align-items: center;
 }
@@ -136,6 +137,7 @@ button:disabled {
 .content__text-block {
   font-size: 18px;
   font-family: var(--main-font, serif);
+  line-height: normal;
 }
 
 .content__text-block > .content__paragraph:not(:last-child) {
@@ -178,6 +180,8 @@ button:disabled {
   position: absolute;
   left: -25px;
   top: 5px;
+  inset-block-start: 50%;
+  margin-block-start: -9px;
 }
 
 .theme_dark .content__list-item::before {
@@ -192,6 +196,12 @@ button:disabled {
   margin-right: 3px;
   font-size: 30px;
   font-weight: 700;
+}
+
+.theme_dark
+  .content__text-block_type_first-lettered
+  > .content__paragraph:first-of-type::first-letter {
+  border: 1px solid var(--text-color, #312a4e);
 }
 
 .content__figure {
@@ -211,6 +221,7 @@ button:disabled {
   font-size: 18px;
   color: inherit;
   border-bottom: 1px solid var(--text-color, #312a4e);
+  font-family: var(--main-font);
 }
 
 .content__card {
@@ -227,6 +238,11 @@ button:disabled {
 .content__card-title {
   font-size: 60px;
   display: inline-block;
+}
+
+.content__card-subtitle {
+  font-family: var(--main-font);
+  font-size: 18px;
 }
 
 .colored-text {
@@ -257,4 +273,5 @@ button:disabled {
   border-top: 1px solid var(--text-color, #312a4e);
   font-size: 18px;
   color: currentColor;
+  font-family: var(--main-font);
 }
